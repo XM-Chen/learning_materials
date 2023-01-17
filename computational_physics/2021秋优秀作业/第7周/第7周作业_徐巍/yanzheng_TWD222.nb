@@ -1,0 +1,80 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2089,         70]
+NotebookOptionsPosition[      1659,         54]
+NotebookOutlinePosition[      2047,         71]
+CellTagsIndexPosition[      2004,         68]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["\:751f\:6210\:6807\:51c6Tracy-Widom\:5206\:5e03", \
+"Section"]], "Text",
+ CellChangeTimes->{{3.845278476308236*^9, 
+  3.8452785141000757`*^9}},ExpressionUUID->"5d0af206-8338-41ab-a8b3-\
+83a13617a1f8"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"PDF", "[", 
+       RowBox[{
+        RowBox[{"TracyWidomDistribution", "[", "\[Beta]", "]"}], ",", "x"}], 
+       "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Beta]", ",", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "2", ",", "4"}], "}"}]}], "}"}]}], "]"}], "//", 
+    "Evaluate"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "5"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"PlotLegends", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<\[Beta] = 1\>\"", ",", "\"\<\[Beta] = 2\>\"", ",", 
+      "\"\<\[Beta] = 4\>\""}], "}"}]}], ",", 
+   RowBox[{"Axes", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.845278469588404*^9, 
+  3.8452784706762896`*^9}},ExpressionUUID->"905b04e9-b0c4-48f8-8d80-\
+737c9a281b2a"]
+},
+WindowSize->{1037, 697},
+WindowMargins->{{Automatic, -215}, {14, Automatic}},
+Magnification:>1.7 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (2019\:5e744\:67088\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 224, 4, 86, "Text",ExpressionUUID->"5d0af206-8338-41ab-a8b3-83a13617a1f8"],
+Cell[785, 26, 870, 26, 138, "Input",ExpressionUUID->"905b04e9-b0c4-48f8-8d80-737c9a281b2a"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,145 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3947,        135]
+NotebookOptionsPosition[      3512,        118]
+NotebookOutlinePosition[      3866,        134]
+CellTagsIndexPosition[      3823,        131]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{"err", ",", "n", ",", "x", ",", "k", ",", "F"}], "]"}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"F", "[", "x_", "]"}], ":=", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "^", 
+      RowBox[{"(", 
+       RowBox[{"k", "/", "2"}], ")"}]}], "/", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"3", "k"}], ")"}], "!"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "Infinity"}], "}"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"err", "=", "1"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"n", "=", "0"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"err", "\[GreaterEqual]", 
+     RowBox[{"10", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", "10"}], ")"}]}]}], ",", 
+    RowBox[{
+     RowBox[{"n", "+=", "1"}], ";", 
+     RowBox[{"result", "=", 
+      RowBox[{
+       RowBox[{"N", "[", 
+        RowBox[{"Normal", "[", 
+         RowBox[{"Series", "[", 
+          RowBox[{
+           RowBox[{"F", "[", "x", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "0", ",", "n"}], "}"}]}], "]"}], "]"}], "]"}], "/.", 
+       RowBox[{"x", "\[Rule]", "1000"}]}]}], ";", 
+     RowBox[{"err", "=", 
+      RowBox[{"N", "[", 
+       RowBox[{
+        RowBox[{"F", "[", "1000", "]"}], "-", "result"}], "]"}]}], ";"}]}], 
+   "]"}], ";"}], "\n", 
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"F", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "n"}], "}"}]}], "]"}], "\n"}], "Input",
+ CellLabel->
+  "In[322]:=",ExpressionUUID->"06ab719e-ced6-4626-818f-b535803d7019"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox[
+    SqrtBox["x"], "6"], "+", 
+   FractionBox["x", "720"], "+", 
+   FractionBox[
+    SuperscriptBox["x", 
+     RowBox[{"3", "/", "2"}]], "362880"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "2"], "479001600"], "+", 
+   FractionBox[
+    SuperscriptBox["x", 
+     RowBox[{"5", "/", "2"}]], "1307674368000"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "6402373705728000"], "+", 
+   FractionBox[
+    SuperscriptBox["x", 
+     RowBox[{"7", "/", "2"}]], "51090942171709440000"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "4"], "620448401733239439360000"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], 
+     RowBox[{"25", "/", "6"}]],
+    SeriesData[$CellContext`x, 0, {}, 3, 25, 6],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {
+    Rational[1, 6], 0, 0, 
+    Rational[1, 720], 0, 0, 
+    Rational[1, 362880], 0, 0, 
+    Rational[1, 479001600], 0, 0, 
+    Rational[1, 1307674368000], 0, 0, 
+    Rational[1, 6402373705728000], 0, 0, 
+    Rational[1, 51090942171709440000], 0, 0, 
+    Rational[1, 620448401733239439360000]}, 3, 25, 6],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.8426259145243196`*^9},
+ CellLabel->
+  "Out[327]=",ExpressionUUID->"51205c5f-1b55-40f5-8539-c56c8f90b96e"]
+}, Open  ]]
+},
+WindowSize->{1904, 997},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (2019\:5e744\:67088\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1601, 52, 215, "Input",ExpressionUUID->"06ab719e-ced6-4626-818f-b535803d7019"],
+Cell[2184, 76, 1312, 39, 86, "Output",ExpressionUUID->"51205c5f-1b55-40f5-8539-c56c8f90b96e"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
